@@ -1,0 +1,148 @@
+const cards = [
+  {
+    symbol: "trefl",
+    letter: "A",
+    id: 1,
+    power: 6,
+  },
+  {
+    symbol: "wine",
+    letter: "A",
+    id: 2,
+    power: 6,
+  },
+  {
+    symbol: "karo",
+    letter: "A",
+    id: 3,
+    power: 6,
+  },
+  {
+    symbol: "pik",
+    letter: "A",
+    id: 4,
+    power: 6,
+  },
+  {
+    symbol: "trefl",
+    letter: "K",
+    id: 5,
+    power: 5,
+  },
+  {
+    symbol: "wine",
+    letter: "K",
+    id: 6,
+    power: 5,
+  },
+  {
+    symbol: "karo",
+    letter: "K",
+    id: 7,
+    power: 5,
+  },
+  {
+    symbol: "pik",
+    letter: "K",
+    id: 8,
+    power: 5,
+  },
+  {
+    symbol: "trefl",
+    letter: "D",
+    id: 9,
+    power: 4,
+  },
+  {
+    symbol: "wine",
+    letter: "D",
+    id: 10,
+    power: 4,
+  },
+  {
+    symbol: "karo",
+    letter: "D",
+    id: 11,
+    power: 4,
+  },
+  {
+    symbol: "pik",
+    letter: "D",
+    id: 12,
+    power: 4,
+  },
+  {
+    symbol: "trefl",
+    letter: "J",
+    id: 13,
+    power: 3,
+  },
+  {
+    symbol: "wine",
+    letter: "J",
+    id: 14,
+    power: 3,
+  },
+  {
+    symbol: "karo",
+    letter: "J",
+    id: 15,
+    power: 3,
+  },
+  {
+    symbol: "pik",
+    letter: "J",
+    id: 16,
+    power: 3,
+  },
+  {
+    symbol: "trefl",
+    letter: "10",
+    id: 17,
+    power: 2,
+  },
+  {
+    symbol: "wine",
+    letter: "10",
+    id: 18,
+    power: 2,
+  },
+  {
+    symbol: "karo",
+    letter: "10",
+    id: 19,
+    power: 2,
+  },
+  {
+    symbol: "pik",
+    letter: "10",
+    id: 20,
+    power: 2,
+  },
+  {
+    symbol: "trefl",
+    letter: "9",
+    id: 21,
+    power: 1,
+  },
+  {
+    symbol: "wine",
+    letter: "9",
+    id: 22,
+    power: 1,
+  },
+  {
+    symbol: "karo",
+    letter: "9",
+    id: 23,
+    power: 1,
+  },
+  {
+    symbol: "pik",
+    letter: "9",
+    id: 24,
+    power: 1,
+  },
+];
+
+export default cards;
