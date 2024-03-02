@@ -1,10 +1,37 @@
+:root {
+  --tablet-view: 768px;
+  --desktop-view: 1280px;
+  --main-green: #8baa36;
+  --main-white: #fafafa;
+  --main-black: #1e1f28;
+  --secondary-black: #22252a;
+  --third-black: #2a2c36;
+  --main-grey: #d9d9d9;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-white);
+  font-family: Georgia;
+}
+button,
+textarea,
+input {
+  font-family: Georgia;
+}
+a {
+  text-decoration: none;
+}
 p {
   margin: 0;
   padding: 0;
 }
 ul,
 li {
-  margin: 0;
   padding: 0;
-  list-style: none;
+  margin: 0;
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
 }
