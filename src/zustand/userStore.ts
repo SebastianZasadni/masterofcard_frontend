@@ -16,19 +16,21 @@ const clearAuthHeader = () => {
 interface AuthState {
   token: string | null;
   isLogged: boolean;
+  name: string | null;
   login: any;
   refreshUser: any;
+  logout: any;
 }
 
-// Początkowy stan autoryzacji
 const initialState: AuthState = {
   token: null,
   isLogged: false,
+  name: "",
   login: async () => {},
   refreshUser: async () => {},
+  logout: async () => {},
 };
 
-// Utworzenie hooka zustand dla stanu autoryzacji
 export const useUserStore = create<AuthState>((set) => ({
   ...initialState,
 
@@ -37,8 +39,9 @@ export const useUserStore = create<AuthState>((set) => ({
     try {
       const response = await axios.post("/users/loginGuest", { name });
       const { guest } = response.data;
-      set({ token: guest.token, isLogged: true });
+      set({ token: guest.token, isLogged: true, name: guest.name });
       localStorage.setItem("token", guest.token);
+      localStorage.setItem("name", guest.name);
       setAuthHeader(guest.token);
       Loading.remove();
       Notify.success("Logged in successfully.");
@@ -54,12 +57,16 @@ export const useUserStore = create<AuthState>((set) => ({
     Loading.standard("Logging in...");
     try {
       const persistedToken = localStorage.getItem("token") || "";
+      const name = localStorage.getItem("name") || "";
       if (!persistedToken) {
         throw new Error("Token not found");
       }
-      set({ token: persistedToken, isLogged: true });
+      set({ token: persistedToken, isLogged: true, name });
+
       setAuthHeader(persistedToken);
       const response = await axios.get("/users/current");
+      console.log(response.data.name);
+
       Loading.remove();
       return response.data;
     } catch (error) {
@@ -72,7 +79,7 @@ export const useUserStore = create<AuthState>((set) => ({
     try {
       await axios.get("/users/logout");
       localStorage.clear();
-      set({ token: null, isLogged: false });
+      set({ token: null, isLogged: false, name: null });
       Notify.success("Logged out successfully.");
       Loading.remove();
       clearAuthHeader();
