@@ -1,0 +1,18 @@
+.mainPage__container {
+  max-width: 768px;
+  height: 100vh;
+  padding: 15px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgb(190, 190, 190);
+}
+.gameList__link {
+  font-size: 50px;
+  color: var(--main-white);
+  cursor: pointer;
+}
+.gameList__link:focus,
+.gameList__link:hover {
+  color: var(--secondary-black);
+}
