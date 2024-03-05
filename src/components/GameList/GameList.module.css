@@ -1,0 +1,9 @@
+.gamesList__item {
+  display: flex;
+  border: solid 1px black;
+  background-color: azure;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}

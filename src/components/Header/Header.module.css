@@ -6,6 +6,7 @@
   background-color: var(--main-grey);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   color: var(--main-black);
+  max-width: 768px;
 }
 .header__button {
   background-color: var(--main-green);
